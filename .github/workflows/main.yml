@@ -8,26 +8,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout your repository
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # 2️⃣ Setup Java
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
 
+      # 3️⃣ Setup Android SDK
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
+      # 4️⃣ Install Gradle
       - name: Install Gradle
         run: sudo apt-get update && sudo apt-get install -y gradle
 
+      # 5️⃣ Build APK (explicitly build the 'app' module)
       - name: Build APK
-        run: gradle assembleDebug
+        run: gradle :app:assembleDebug
 
+      # 6️⃣ Upload the APK as artifact
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: apk
-          path: app/build/outputs/apk/debug/
+          name: app-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
