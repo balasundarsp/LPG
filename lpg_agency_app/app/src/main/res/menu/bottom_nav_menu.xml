@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/dashboardFragment"  android:title="Home"      android:icon="@android:drawable/ic_menu_today"/>
+    <item android:id="@+id/salesFragment"      android:title="Sales"     android:icon="@android:drawable/ic_menu_send"/>
+    <item android:id="@+id/expensesFragment"   android:title="Expenses"  android:icon="@android:drawable/ic_menu_agenda"/>
+    <item android:id="@+id/inventoryFragment"  android:title="Inventory" android:icon="@android:drawable/ic_menu_manage"/>
+    <item android:id="@+id/settingsFragment"   android:title="Settings"  android:icon="@android:drawable/ic_menu_preferences"/>
+</menu>

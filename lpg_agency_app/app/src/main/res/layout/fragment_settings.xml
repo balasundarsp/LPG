@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚙ Settings"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customise dropdown options used throughout the app."
+            android:textColor="#666"
+            android:textSize="13sp"
+            android:paddingBottom="16dp"/>
+
+        <!-- ── CYLINDER TYPES ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🔵  Cylinder Types"
+                        android:textSize="15sp" android:textStyle="bold" android:textColor="#1A237E"/>
+                    <Button android:id="@+id/btn_add_cylinder"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="+ Add" android:textSize="12sp"
+                        android:paddingStart="12dp" android:paddingEnd="12dp"
+                        android:backgroundTint="#1A237E"
+                        style="@style/Widget.MaterialComponents.Button"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="e.g. 3kg, 6kg, 12kg, 50kg"
+                    android:textColor="#888" android:textSize="12sp" android:paddingBottom="8dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_cylinder_types"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── SALE TYPES ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🟢  Sale Types"
+                        android:textSize="15sp" android:textStyle="bold" android:textColor="#1B5E20"/>
+                    <Button android:id="@+id/btn_add_sale_type"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="+ Add" android:textSize="12sp"
+                        android:paddingStart="12dp" android:paddingEnd="12dp"
+                        android:backgroundTint="#1B5E20"
+                        style="@style/Widget.MaterialComponents.Button"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="e.g. Refill, New Cylinder, Deposit Return"
+                    android:textColor="#888" android:textSize="12sp" android:paddingBottom="8dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_sale_types"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── EXPENSE CATEGORIES ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🔴  Expense Categories"
+                        android:textSize="15sp" android:textStyle="bold" android:textColor="#B71C1C"/>
+                    <Button android:id="@+id/btn_add_expense_cat"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="+ Add" android:textSize="12sp"
+                        android:paddingStart="12dp" android:paddingEnd="12dp"
+                        android:backgroundTint="#B71C1C"
+                        style="@style/Widget.MaterialComponents.Button"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="e.g. Delivery, Staff, Rent, Utilities"
+                    android:textColor="#888" android:textSize="12sp" android:paddingBottom="8dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_expense_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── PAYMENT METHODS ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🟡  Payment Methods"
+                        android:textSize="15sp" android:textStyle="bold" android:textColor="#E65100"/>
+                    <Button android:id="@+id/btn_add_payment"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="+ Add" android:textSize="12sp"
+                        android:paddingStart="12dp" android:paddingEnd="12dp"
+                        android:backgroundTint="#E65100"
+                        style="@style/Widget.MaterialComponents.Button"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="e.g. Cash, Mobile Money, Bank Transfer"
+                    android:textColor="#888" android:textSize="12sp" android:paddingBottom="8dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_payment_methods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Database Backup &amp; Sync" android:textSize="20sp" android:textStyle="bold"
+            android:textColor="#1A237E" android:paddingBottom="8dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Export your database and share it with another device running this app to sync data."
+            android:textColor="#666" android:paddingBottom="16dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="4dp" app:cardCornerRadius="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+
+                <TextView android:text="Export Database" android:textSize="16sp" android:textStyle="bold"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:text="Creates a backup file and lets you share it via WhatsApp, email, etc."
+                    android:textColor="#666" android:paddingBottom="12dp" android:paddingTop="4dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <Button android:id="@+id/btn_export" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="📤  Export &amp; Share Database"
+                    android:backgroundTint="#1A237E"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="4dp" app:cardCornerRadius="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+
+                <TextView android:text="Import Database" android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="#B71C1C" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:text="⚠ WARNING: This will REPLACE all current data with the backup!"
+                    android:textColor="#B71C1C" android:paddingBottom="12dp" android:paddingTop="4dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <Button android:id="@+id/btn_import" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="📥  Import Database from File"
+                    android:backgroundTint="#B71C1C"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ProgressBar android:id="@+id/progress_bar" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:visibility="gone"/>
+
+        <TextView android:id="@+id/tv_backup_list" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="" android:padding="8dp"
+            android:textColor="#444" android:textSize="13sp"/>
+
+    </LinearLayout>
+</ScrollView>

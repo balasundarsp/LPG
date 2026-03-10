@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment android:id="@+id/dashboardFragment"
+        android:name="com.lpgagency.accounting.ui.dashboard.DashboardFragment"
+        android:label="Dashboard">
+        <action android:id="@+id/action_dashboard_to_addSale"    app:destination="@id/addSaleFragment"/>
+        <action android:id="@+id/action_dashboard_to_addExpense" app:destination="@id/addExpenseFragment"/>
+        <action android:id="@+id/action_dashboard_to_inventory"  app:destination="@id/inventoryFragment"/>
+        <action android:id="@+id/action_dashboard_to_backup"     app:destination="@id/backupFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/salesFragment"
+        android:name="com.lpgagency.accounting.ui.sales.SalesFragment"
+        android:label="Sales">
+        <action android:id="@+id/action_sales_to_addSale" app:destination="@id/addSaleFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/addSaleFragment"
+        android:name="com.lpgagency.accounting.ui.sales.AddSaleFragment"
+        android:label="Add Sale">
+        <argument android:name="saleId" app:argType="long" android:defaultValue="-1"/>
+    </fragment>
+
+    <fragment android:id="@+id/expensesFragment"
+        android:name="com.lpgagency.accounting.ui.expenses.ExpensesFragment"
+        android:label="Expenses">
+        <action android:id="@+id/action_expenses_to_addExpense" app:destination="@id/addExpenseFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/addExpenseFragment"
+        android:name="com.lpgagency.accounting.ui.expenses.AddExpenseFragment"
+        android:label="Add Expense"/>
+
+    <fragment android:id="@+id/inventoryFragment"
+        android:name="com.lpgagency.accounting.ui.inventory.InventoryFragment"
+        android:label="Inventory"/>
+
+    <fragment android:id="@+id/settingsFragment"
+        android:name="com.lpgagency.accounting.ui.settings.SettingsFragment"
+        android:label="Settings"/>
+
+    <fragment android:id="@+id/backupFragment"
+        android:name="com.lpgagency.accounting.ui.dashboard.BackupFragment"
+        android:label="Backup &amp; Sync"/>
+
+</navigation>

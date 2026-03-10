@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LPG Agency Dashboard"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:paddingBottom="16dp"/>
+
+        <!-- Stats Grid -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:useDefaultMargins="true">
+
+            <!-- Today Sales -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="12dp" android:background="#E8F5E9">
+                    <TextView android:text="Today Sales" android:textSize="12sp" android:textColor="#388E3C"/>
+                    <TextView android:id="@+id/tv_today_sales" android:text="--" android:textSize="18sp"
+                        android:textStyle="bold" android:textColor="#1B5E20"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Today Expenses -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="12dp" android:background="#FFEBEE">
+                    <TextView android:text="Today Expenses" android:textSize="12sp" android:textColor="#C62828"/>
+                    <TextView android:id="@+id/tv_today_expenses" android:text="--" android:textSize="18sp"
+                        android:textStyle="bold" android:textColor="#B71C1C"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Profit -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="12dp" android:background="#E3F2FD">
+                    <TextView android:text="Today Profit" android:textSize="12sp" android:textColor="#1565C0"/>
+                    <TextView android:id="@+id/tv_today_profit" android:text="--" android:textSize="18sp"
+                        android:textStyle="bold" android:textColor="#0D47A1"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Outstanding -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="12dp" android:background="#FFF8E1">
+                    <TextView android:text="Outstanding" android:textSize="12sp" android:textColor="#F57F17"/>
+                    <TextView android:id="@+id/tv_outstanding" android:text="--" android:textSize="18sp"
+                        android:textStyle="bold" android:textColor="#E65100"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Full Cylinders -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="12dp" android:background="#E0F7FA">
+                    <TextView android:text="Full Cylinders" android:textSize="12sp" android:textColor="#006064"/>
+                    <TextView android:id="@+id/tv_full_cylinders" android:text="--" android:textSize="18sp"
+                        android:textStyle="bold" android:textColor="#004D40"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Empty Cylinders -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="12dp" android:background="#F3E5F5">
+                    <TextView android:text="Empty Cylinders" android:textSize="12sp" android:textColor="#6A1B9A"/>
+                    <TextView android:id="@+id/tv_empty_cylinders" android:text="--" android:textSize="18sp"
+                        android:textStyle="bold" android:textColor="#4A148C"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+        <!-- Quick Actions -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Quick Actions" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#333" android:paddingTop="16dp" android:paddingBottom="8dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btn_new_sale" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="+ Sale" android:layout_margin="4dp"
+                android:backgroundTint="#2E7D32"/>
+            <Button android:id="@+id/btn_new_expense" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="+ Expense" android:layout_margin="4dp"
+                android:backgroundTint="#C62828"/>
+            <Button android:id="@+id/btn_inventory" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Stock" android:layout_margin="4dp"
+                android:backgroundTint="#1565C0"/>
+            <Button android:id="@+id/btn_backup" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Backup" android:layout_margin="4dp"
+                android:backgroundTint="#6A1B9A"/>
+        </LinearLayout>
+
+        <!-- Recent Sales -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Recent Sales" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#333" android:paddingTop="16dp" android:paddingBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recent_sales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
+
+    </LinearLayout>
+</ScrollView>
